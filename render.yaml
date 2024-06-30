@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: GuviTask
+    env: php
+    plan: free
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: DATABASE_URL
+        value: "postgresql://userdetails_user:7i0TzF6FHVLDGSJoM4aASrMtnL1mtL8K@dpg-cq0ma6aju9rs73avjckg-a/userdetails"
+        fromDatabase:
+          name: UserDetails
+          property: connectionString
